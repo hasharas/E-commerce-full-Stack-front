@@ -75,9 +75,11 @@ import stripe_logo from './stripe_logo.png'
 import cross_icon from './cross_icon.png'
 import hero1 from './hero1.avif'
 import hero2 from './hero2.jpg'
+import zippo_logo from './zippo_logo.png'
 
 export const assets = {
     logo,
+    zippo_logo,
     hero_img,
     hero1,
     hero2,
