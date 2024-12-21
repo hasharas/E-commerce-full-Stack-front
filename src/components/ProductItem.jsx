@@ -7,7 +7,7 @@ const ProductItem = ({ id, image, name, price }) => {
       const { currency } = useContext(ShopContext);
 
       return (
-            <Link to={`/product/${id}`} className='text-gray-700 border cursor-pointer'>
+            <Link to={`/product/${id}`} className='text-gray-700 border cursor-pointer hover:shadow-lg transition'>
                   <div className='overflow-hidden'>
                         <img src={image[0]} className='hover:scale-110 transition ease-in-out' alt="cart image" />
                   </div>
