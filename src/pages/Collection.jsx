@@ -8,7 +8,7 @@ const Collection = () => {
 
       const { products } = useContext(ShopContext);
       const [showFilter, setShowFilter] = useState(false);
-      const [filterProducts, setFIlterProducts] = useState([]);
+      const [filterProducts, setFilterProducts] = useState([]);
 
       const [category, setCategory] = useState([]);
       const [subCategory, setSubCategory] = useState([]);
@@ -29,9 +29,29 @@ const Collection = () => {
             }
       }
 
+
+      const applyFilter = () => {
+
+            let productsCopy = products.slice();
+
+            if (category.length > 0) {
+                  productsCopy = productsCopy.filter(item => category.includes(item.category));
+            }
+
+            if (subCategory.length > 0) {
+                  productsCopy = productsCopy.filter(item => subCategory.includes(item.subCategory));
+            }
+
+            setFilterProducts(productsCopy);
+      }
+
       useEffect(() => {
-            setFIlterProducts(products);
+            setFilterProducts(products);
       }, [])
+
+      useEffect(() => {
+            applyFilter();
+      }, [category, subCategory])
 
       // useEffect(() => {
       //       console.log("category arry datas :", category)
