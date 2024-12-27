@@ -1,10 +1,16 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { ShopContext } from '../context/ShopContext';
 import { assets } from '../assets/frontend_assets/assets';
+import { useLocation } from 'react-router-dom';
 
 const SearchBar = () => {
 
       const { search, setSearch, showSearch, setShowSearch } = useContext(ShopContext);
+      const locetion = useLocation();
+
+      useEffect(() => {
+            console.log(locetion.pathname);
+      }, [locetion]);
 
       return showSearch ? (
             <div className='border-t border-b bg-gray-50 text-center'>
