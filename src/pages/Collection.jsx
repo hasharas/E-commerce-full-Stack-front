@@ -6,14 +6,14 @@ import ProductItem from '../components/ProductItem.jsx'
 
 const Collection = () => {
 
-      const { products } = useContext(ShopContext);
+      const { products, search, showSearch } = useContext(ShopContext);
       const [showFilter, setShowFilter] = useState(false);
       const [filterProducts, setFilterProducts] = useState([]);
-
       const [category, setCategory] = useState([]);
       const [subCategory, setSubCategory] = useState([]);
-
       const [sortType, setSortType] = useState('relevent');
+
+
 
       const toggleCategory = (e) => {
             if (category.includes(e.target.value)) {
