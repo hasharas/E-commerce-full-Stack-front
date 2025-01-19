@@ -80,7 +80,12 @@ const Product = () => {
                               <button className='bg-black text-white px-8 py-3 text-sm active:bg-gray-700'>
                                     ADD TO CART
                               </button>
-
+                              <hr className='mt-8 sm:w:4/5' />
+                              <div className='text-sm text-gray-500 mt-5 flex flex-col gap-1'>
+                                    <p>100% orginal product</p>
+                                    <p>Cash on delivery is available on this product. </p>
+                                    <p>Esye return and exchange policy withing 7 days.</p>
+                              </div>
                         </div>
                   </div>
 
