@@ -94,6 +94,15 @@ const Product = () => {
                               <b className='border px-5 py-3 text-sm'>Description</b>
                               <p className='border px-5 py-3 text-sm'>Reviews (231)</p>
                         </div>
+                        <div className='flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500'>
+                              <p>Total 5 (delta 4), reused 0 (delta 0), pack-reused 0
+                                    remote: Resolving deltas: 100% (4/4), completed with 4 local objects.</p>
+                              <p>
+                                    Total 5 (delta 4), reused 0 (delta 0), pack-reused 0
+                                    remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+                              </p>
+
+                        </div>
                   </div>
 
             </div>
