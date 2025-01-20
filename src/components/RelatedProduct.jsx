@@ -4,19 +4,21 @@ import { ShopContext } from '../context/ShopContext';
 const RelatedProduct = ({ category, subCategory }) => {
 
 
-      const { product } = useContext(ShopContext);
+      const { products } = useContext(ShopContext);
       const [related, setRelated] = useState([]);
 
       useEffect(() => {
-            if (product.lenth > 0) {
-                  let productCopy = product.slice();
+
+            if (products.length > 0) {
+
+                  let productCopy = products.slice();
 
                   productCopy = productCopy.filter((item) => category === item.category);
                   productCopy = productCopy.filter((item) => subCategory === item.subCategory);
 
-                  console.log(productCopy.slice(0, 5));
+                  console.log("related data", productCopy.slice(0, 5));
             }
-      }, [product])
+      }, [products])
 
       return (
             <div>
