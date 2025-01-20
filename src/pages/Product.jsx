@@ -104,6 +104,8 @@ const Product = () => {
 
                         </div>
                   </div>
+                  {/* display related product */}
+
 
             </div>
       ) : <div className='opacity-0'></div>
